@@ -18,9 +18,20 @@ function calculate() {
         }
     let price = pages * 300;
 
-
+// Branding Checkbox
     if (selectBranding.checked) {
         price += 500;
+    }
+
+// Copywriting Checkbox
+    if (selectCopywriting.checked) {
+        const copywritingPrice = pages * 500; 
+        price += copywritingPrice; 
+    }
+
+// Logo Checkbox
+    if (selectLogo.checked) {
+        price += 150;
     }
 
     totalText.innerText = 'Total cost is $' + price;
